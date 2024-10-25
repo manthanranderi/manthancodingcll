@@ -1,61 +1,20 @@
-#include<stdio.h>
-void main()
+// Online C compiler to run C program online
+
+#include <stdio.h>
+
+int main()
 {
-    int x,y,z,k;
-    printf("Enter the value of x:");
-    scanf("%d" &x);
-    printf("Enter the value of y:");
-    scanf("%d" &y);
-    printf("Enter the value of z:");
-    scanf("%d" &z);
-    printf("Enter the value of k:");
-    scanf("%d" &k);
-    if (x >=y)
+    int size;
+    int array[10]={1,2,3,4,5,6,7,8,9};
+    int max = array[0];
+    for(int i=0;i<10;i++)
     {
-        if (x >=z)
+        if(max<array[i])
         {
-            if(x >=k)
-            {
-                printf("x is max");
-            }
-            else
-            {
-                printf("k is max");
-            }
-        }
-        else
-        {
-            if(z >=k)
-            {
-                printf("z is max");
-            }
-            else
-            {
-                printf("k is max");
-            }
+            max = array[i];
         }
     }
-    else
-    {
-        if (y >=z)
-        {
-            if (y >=k)
-            {
-                printf("y is greatest");
-            }
-            else{
-                printf("k is max");
-            }            
-        }
-        else{
-            if (z >=k)
-            {
-                printf(" z is max");
-            }
-            else
-            {
-                printf("k is max");
-            }
-        }
-    }
+    
+    printf("The maximum number is : %d",max);
+    
 }
